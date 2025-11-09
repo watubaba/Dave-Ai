@@ -1,47 +1,5 @@
-require('./settings')
-require('dotenv').config()
-const config = require('./config');
-const os = require('os');
 
-const { default: makeWASocket } = require("@whiskeysockets/baileys")
-const NodeCache = require("node-cache")
-const readline = require("readline")
-const pino = require('pino')
-const { Boom } = require('@hapi/boom')
-const yargs = require('yargs/yargs')
-const fs = require('fs')
-const { loadSettings, saveSettings } = require('./settings');
-const chalk = require('chalk')
-const path = require('path')
-const axios = require('axios')
-const _ = require('lodash')
-const { join } = require('path')
-const moment = require('moment-timezone')
-const FileType = require('file-type')
-const { rmSync, existsSync } = require('fs')
-const { parsePhoneNumber } = require("libphonenumber-js")
-const { PHONENUMBER_MCC } = require('@whiskeysockets/baileys/lib/Utils/generics')
-const { imageToWebp, videoToWebp, writeExifImg, writeExifVid } = require('./library/lib/exif')
-const { smsg, isUrl, generateMessageTag, getBuffer, getSizeMedia, fetch, await: awaitHelper, sleep, reSize } = require('./library/lib/function')
-const {
-    useMultiFileAuthState,
-    DisconnectReason,
-    fetchLatestBaileysVersion,
-    generateForwardMessageContent,
-    prepareWAMessageMedia,
-    generateWAMessageFromContent,
-    generateMessageID,
-    downloadContentFromMessage,
-    jidDecode,
-    proto,
-    jidNormalizedUser,
-    makeCacheableSignalKeyStore,
-    delay
-} = require("@whiskeysockets/baileys")
-
-// ================== STORE INITIALIZATION ==================
 const { color } = require('./library/lib/color')
-
 require('./settings')
 require('dotenv').config()
 const config = require('./config');
@@ -83,7 +41,7 @@ const {
     delay
 } = require("@whiskeysockets/baileys")
 
-// Simple store initialization - exactly as you requested
+// simple
 const store = require('./library/database/basestore')
 store.readFromFile()
 const settings = require('./settings')
