@@ -12,6 +12,7 @@ const { Boom } = require('@hapi/boom')
 const yargs = require('yargs/yargs')
 const fs = require('fs')
 const { loadSettings, saveSettings } = require('./settings');
+const chalk = require('chalk')
 const path = require('path')
 const axios = require('axios')
 const _ = require('lodash')
