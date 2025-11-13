@@ -20,7 +20,6 @@ const moment = require('moment-timezone')
 const FileType = require('file-type')
 const { rmSync, existsSync } = require('fs')
 const { parsePhoneNumber } = require("libphonenumber-js")
-const { PHONENUMBER_MCC } = require('@whiskeysockets/baileys/lib/Utils/generics')
 const { imageToWebp, videoToWebp, writeExifImg, writeExifVid } = require('./library/lib/exif')
 const { smsg, isUrl, generateMessageTag, getBuffer, getSizeMedia, fetch, await: awaitHelper, sleep, reSize } = require('./library/lib/function')
 const {
